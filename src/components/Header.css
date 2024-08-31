@@ -1,0 +1,63 @@
+.header {
+  background-color: #000;
+  padding: 1rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 1rem;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #1563ff; /* HashiCorp blue color for highlight */
+}
+
+/* Optional: Add an underline effect on hover */
+.menu a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #1563ff;
+  transition: width 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
