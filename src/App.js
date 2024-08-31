@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
+import ChatBox from './components/ChatBox';
 import './App.css';
 
 function App() {
+  const [showChatBox, setShowChatBox] = useState(false);
+
+  const toggleChatBox = () => {
+    setShowChatBox(!showChatBox);
+  };
   return (
     <div className="App">
       <Header />
@@ -20,6 +26,12 @@ function App() {
             <button className="secondary-btn">Contact sales →</button>
           </div>
         </div>
+        <div className="chat-container">
+        <button onClick={toggleChatBox} className="chat-toggle">
+          {showChatBox ? '×' : 'Chat'}
+        </button>
+        {showChatBox && <ChatBox onClose={() => setShowChatBox(false)} />}
+      </div>
       </main>
     </div>
   );
