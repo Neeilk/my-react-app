@@ -58,6 +58,8 @@
   transition: width 0.3s;
 }
 
+
 .menu a:hover::after {
   width: 100%;
 }
+
