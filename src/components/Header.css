@@ -64,6 +64,7 @@
 }
 
 .products-dropdown {
+  display: none;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -73,100 +74,99 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   z-index: 1000;
-  min-width: 800px;
-  color: #333;
-  margin-top: 10px; /* Add some space between the menu item and the dropdown */
-  display: none;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  width: 800px;
 }
 
-.products-menu-item {
+.products-dropdown.show {
+  display: block;
+}
+
+.products-menu-item,
+.developers-menu-item {
   position: relative;
 }
 
-.products-menu-item:hover .products-dropdown {
-  display: block;
-  opacity: 1;
+.products-dropdown,
+.developers-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 1000;
 }
 
+.products-dropdown {
+  min-width: 800px;
+}
+
+.developers-dropdown {
+  min-width: 200px;
+}
+
+/* Styles for products dropdown */
 .product-section {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .product-section h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  color: #000000;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
-
-.product-item {
-  display: flex;
-  align-items: flex-start;
-}
-
-.product-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  border-radius: 8px;
-}
-
-.product-info h4 {
-  margin: 0;
-  font-size: 16px;
-}
-
-.product-info p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  color: #666;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .cloud-platform {
   display: flex;
   align-items: center;
-  background-color: #f5f5f5;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 20px;
+  margin-top: 1rem;
 }
 
-.platform-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  background-color: #000;
-}
-
-.platform-info {
-  flex-grow: 1;
-}
-
-.platform-info h4 {
+/* Styles for developers dropdown */
+.developers-dropdown ul {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
-  font-size: 16px;
 }
 
-.platform-info p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  color: #666;
+.developers-dropdown li {
+  margin-bottom: 0.75rem;
 }
 
-.signup-link {
-  color: #1563ff;
+.developers-dropdown a {
+  color: #333;
   text-decoration: none;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
 }
 
-.signup-link:hover {
-  text-decoration: underline; /* Add underline on hover for better UX */
+.developers-dropdown i {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* Icon placeholders */
+.icon-doc::before { content: '📄'; }
+.icon-cert::before { content: '🏅'; }
+.icon-integrate::before { content: '🔗'; }
+.icon-webinar::before { content: '🎥'; }
+.icon-tutorial::before { content: '📚'; }
+.icon-community::before { content: '👥'; }
+.icon-status::before { content: '📊'; }
+
+/* Hover effect for menu items */
+.developers-dropdown a:hover {
+  background-color: #f5f5f5;
 }
 
 /* Product icons */
@@ -174,7 +174,7 @@
 .packer { background-color: #00ACFF; }
 .waypoint { background-color: #14C6CB; }
 .nomad { background-color: #00CA8E; }
-.vault { background-color: #FFEC6E; }
+.vault { background-color: #FFEC6E; color: #000000; }
 .boundary { background-color: #F24C53; }
 .consul { background-color: #E03875; }
 
@@ -195,3 +195,134 @@
   display: block;
 }
 
+.developers-dropdown {
+  min-width: 200px;
+}
+
+.developers-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.developers-dropdown li {
+  margin-bottom: 0.75rem;
+}
+
+.developers-dropdown a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.developers-dropdown i {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* Icon placeholders (replace with actual icons as needed) */
+.icon-doc::before { content: '📄'; }
+.icon-cert::before { content: '🏅'; }
+.icon-integrate::before { content: '🔗'; }
+.icon-webinar::before { content: '🎥'; }
+.icon-tutorial::before { content: '📚'; }
+.icon-community::before { content: '👥'; }
+.icon-status::before { content: '📊'; }
+
+/* Hover effect for menu items */
+.developers-dropdown a:hover {
+  background-color: #f5f5f5;
+}
+
+.product-item {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.product-item:hover {
+  background-color: #e0e0e0;
+}
+
+.product-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.product-info h4 {
+  color: #000000;
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.product-info p {
+  color: #333333;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.cloud-platform {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.platform-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #000000;
+  border-radius: 8px;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.platform-info h4 {
+  color: #000000;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.platform-info p {
+  color: #333333;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.signup-link {
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.signup-link:hover {
+  background-color: #333333;
+}
