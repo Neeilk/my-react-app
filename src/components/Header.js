@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="header">
       <div className="container">
-        <div className="logo">HashiCorp</div>
+        <div className="logo">PlatformX</div>
         <nav className="menu">
           <ul>
             <li><a href="#platform">Platform</a></li>
@@ -102,7 +102,7 @@ function Header() {
               )}
             </li>
             <li><a href="#resources">Resources</a></li>
-            <li><a href="#company">Company</a></li>
+            <li><a href="#department">Department</a></li>
           </ul>
         </nav>
       </div>
