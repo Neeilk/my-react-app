@@ -91,12 +91,13 @@ function Header() {
               {showDevelopersMenu && (
                 <div className="developers-dropdown">
                   <ul>
-                    <li><a href="#docs"><span className="icon-doc">📄</span>Documentation</a></li>
-                    <li><a href="#certification"><span className="icon-cert">🏅</span>Certification</a></li>
-                    <li><a href="#integrations"><span className="icon-integrate">🔗</span>Integrations</a></li>
-                    <li><a href="#webinars"><span className="icon-webinar">🎥</span>Webinars</a></li>
-                    <li><a href="#tutorials"><span className="icon-tutorial">📚</span>Tutorials</a></li>
-                    <li><a href="#community"><span className="icon-community">👥</span>Community</a></li>
+                    <li><a href="#documentation"><i className="icon-doc"></i> Documentation</a></li>
+                    <li><a href="#certifications"><i className="icon-cert"></i> Certifications</a></li>
+                    <li><a href="#integrations"><i className="icon-integrate"></i> Integrations</a></li>
+                    <li><a href="#webinars"><i className="icon-webinar"></i> Webinars</a></li>
+                    <li><a href="#tutorials"><i className="icon-tutorial"></i> Tutorials</a></li>
+                    <li><a href="#community"><i className="icon-community"></i> Community</a></li>
+                    <li><a href="#service-status"><i className="icon-status"></i> Service status</a></li>
                   </ul>
                 </div>
               )}
