@@ -348,17 +348,30 @@
   font-size: 0.9rem;
 }
 
-.signup-link {
-  background-color: #000000;
-  color: #ffffff;
+.login-link {
+  color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
+  margin-right: 20px;
+  font-size: 14px;
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.signup-button {
+    background-color: #0052CC;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
 
 .signup-link:hover {
   background-color: #333333;
 }
+
+
+

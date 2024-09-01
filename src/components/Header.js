@@ -106,6 +106,10 @@ function Header() {
             <li><a href="#department">Department</a></li>
           </ul>
         </nav>
+        <div className="header-actions">
+          <a href="#login" className="login-link">Log in</a>
+          <a href="#signup" className="signup-button">Sign up for free</a>
+        </div>
       </div>
     </header>
   );
